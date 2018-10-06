@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component'
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -10,7 +13,9 @@ import { MenuComponent } from './menu/menu.component'
     MenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
