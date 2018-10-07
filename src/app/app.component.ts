@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'testMenu';
+  showMenu: boolean = true;
+  listProducts: any[] = new Array();
+
+  onSelectedProduct(product){
+    //this.showMenu = false;
+    
+    this.listProducts.push(product);
+  }
+
+  onCancelOrder(){
+    this.listProducts = new Array();
+  }
+
+  onSubmitOrder(totalValue: number){
+    this.onCancelOrder();
+    alert(totalValue);
+
+  }
 }

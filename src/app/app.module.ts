@@ -4,13 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component'
 import { FormsModule } from "@angular/forms";
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { SelectedMenuComponent } from './selected-menu/selected-menu.component';
+import { StepsMenuComponent } from './steps-menu/steps-menu.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    SelectedMenuComponent,
+    StepsMenuComponent
   ],
   imports: [
     BrowserModule,

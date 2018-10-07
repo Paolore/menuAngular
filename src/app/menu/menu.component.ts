@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ApiMenuService } from '../../shared/service/api-menu.service';
 
 
@@ -10,6 +10,8 @@ import { ApiMenuService } from '../../shared/service/api-menu.service';
 })
 export class MenuComponent implements OnInit{
 
+  @Output() onSelectedEvent : EventEmitter<any> = new EventEmitter();
+
   public data : any = [];
   constructor(private _apiMenu: ApiMenuService){}
 
@@ -17,5 +19,11 @@ export class MenuComponent implements OnInit{
     this._apiMenu.getData().subscribe((data) => {
       this.data = data;
     });
+  }
+
+  onSelected(event, product) {
+    if (product != null && this.onSelectedEvent != null){
+      this.onSelectedEvent.emit(product);
+    }
   }
 }
