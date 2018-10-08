@@ -1,24 +1,33 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xl-6 col-lg-6 col-md-6">
-      <input class="btn btn-success" type="button" value="Finalizar Pedido" (click) = "submitOrder()">
-    </div>
-    <div class="col-xl-6 col-lg-6 col-md-6">
-      <input class="btn btn-danger" type="button" value="Cancelar Pedido" (click) = "cancelOrder()">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xl-12 col-lg-12 col-md-12">
-      <h3>Total Pedido {{getTotalValue() | currency }}</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div *ngFor="let item of products" class="col-xl-12 col-lg-12 col-md-12" style="width: 18rem;">
-      <div class="card-body">
 
-        <h5 class="card-title">{{item.name}}</h5>
-        <a href="#" class="btn btn-success">{{item.price}}</a>
-      </div>
-    </div>
-  </div>
+<div class="margin alert alert-warning col-xl-12 col-md-6 table-responsive">
+  <table >
+      <tr > 
+        <td ><input class="btn btn-success btn-sm" type="button" value="Finalizar Pedido" (click) = "submitOrder()"></td>
+        <td ><input class="btn btn-danger btn-sm" type="button" value="Cancelar Pedido" (click) = "cancelOrder()"></td>
+      </tr>
+    </table>
+    <table class="table table-striped" >
+      <thead>
+        <tr>
+          <th scope="col">Total Pedido</th>
+          <th scope="col">{{getTotalValue() | currency }}</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of products">
+        <tr> 
+          <td>{{item.name}}</td>
+          <td>{{item.price}}</td>
+        </tr>
+      </tbody>
+  </table>
 </div>
+<!-- <button class="btn btn-primary" (clic)="enviar(nombreModal)" >Abrir</button>
+<ng-template id="nombreModal" let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    cabecera
+    <button type="button" class="close" (click)="c('')">x</button>
+  </div>
+  <div class="modal-body">
+    contenido
+  </div>
+</ng-template> -->

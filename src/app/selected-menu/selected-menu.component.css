@@ -1,0 +1,13 @@
+.inicio {
+  background-image: '../../assets/img/background_ini.png';
+}
+.margin {
+  margin-top: 20px;
+  
+}
+
+table{
+  border-radius: 5px;
+  border-collapse: separate;
+  border-style: none;
+}

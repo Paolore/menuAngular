@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'selected-menu',
@@ -10,8 +11,10 @@ export class SelectedMenuComponent implements OnInit {
   @Output() onCancelEvent : EventEmitter<any> = new EventEmitter();
   @Output() onSubmitOrderEvent : EventEmitter<any> = new EventEmitter();
   
-  constructor() { }
-
+  constructor(private modalService: NgbModal) { }
+    enviar(modal){
+      this.modalService.open(modal);
+    }
   ngOnInit() {
   }
 
@@ -34,4 +37,6 @@ export class SelectedMenuComponent implements OnInit {
     
     this.onSubmitOrderEvent.emit(totalValue);
   }
+
+
 }

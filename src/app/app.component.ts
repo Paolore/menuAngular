@@ -10,9 +10,10 @@ export class AppComponent {
   listProducts: any[] = new Array();
 
   onSelectedProduct(product){
-    //this.showMenu = false;
+    this.showMenu = false;
     
     this.listProducts.push(product);
+    console.log(this.listProducts);
   }
 
   onCancelOrder(){
