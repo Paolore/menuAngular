@@ -1,21 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   showMenu: boolean = true;
   listProducts: any[] = new Array();
+  listSteps: any[] = new Array();
 
   onSelectedProduct(product){
     this.showMenu = false;
     
     this.listProducts.push(product);
-    console.log(this.listProducts);
+    this.listSteps = product.steps;
+    console.log(this.listSteps);
+    
+    
   }
 
+  ngOnInit() {
+  }
+  
   onCancelOrder(){
     this.listProducts = new Array();
   }
@@ -24,5 +31,9 @@ export class AppComponent {
     this.onCancelOrder();
     alert(totalValue);
 
+  }
+
+  onSelectedSteps(){
+    
   }
 }

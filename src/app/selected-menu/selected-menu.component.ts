@@ -34,8 +34,7 @@ export class SelectedMenuComponent implements OnInit {
 
   submitOrder(){
     var totalValue : number = this.getTotalValue();
-    
-    this.onSubmitOrderEvent.emit(totalValue);
+      this.onSubmitOrderEvent.emit(totalValue);
   }
 
 

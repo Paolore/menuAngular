@@ -4,6 +4,6 @@
   </div>
   <div class="col-xl-9 col-lg-10 col-md-12">
     <menu *ngIf="showMenu" (onSelectedEvent) = "onSelectedProduct($event)"></menu>
-    <steps-menu *ngIf="!showMenu" ></steps-menu>
+    <steps-menu *ngIf="!showMenu" [(steps)]="listSteps"></steps-menu>
   </div>
 </div>
