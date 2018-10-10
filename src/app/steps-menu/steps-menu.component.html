@@ -1,20 +1,21 @@
 <div class="container-fluid body-step">
+  <span><strong>Selecciona las adiciones que deseas para tu pedido dando clic en cada menú</strong></span>
   <div class="row container-padding">
-    <div *ngFor="let item of steps"  class="col-lg-3 col-xl-3 col-md-3" (click)="onSelectedStep(item)" (touchend)="onSelectedStep(item)">
-      <div class="alert alert-warning" role="alert">
+    <div *ngFor="let item of steps"  class="col-lg-3 col-xl-3 col-md-3 border-menu" (click)="onSelectedStep(item)" (touchend)="onSelectedStep(item)">
+      <div class="">
         <h6 class="card-title">{{item.name}}</h6>
       </div>
     </div>  
   </div>
-  <div class="row container-padding">
-    <div *ngFor="let item of currentStep.items"  class="col-lg-3 col-xl-3 col-md-3" (click)="onItemStepSelected(item)" (touchend)="onItemStepSelected(item)">
-      <div class="alert alert-warning" role="alert">
+  <div class="row container-padding" >
+    <div ng *ngFor="let item of currentStep.items"  class="col-lg-3 col-xl-3 col-md-3 border-menu" (click)="onItemStepSelected(item)" (touchend)="onItemStepSelected(item)"  >
+      <div class="">
         <p>{{item.name}}</p>
       </div>
     </div>  
   </div>
   <div >
-      <input type="button" value="Regresar al menu" class="btn btn-success btn-sm" (click)="onBackMenu()">
+      <input type="button" value="Regresar al menu" class="btn btn-success btn-sm" (click)="onBackMenu() ">
   </div>
 </div> 
  

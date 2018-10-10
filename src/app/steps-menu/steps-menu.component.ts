@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'steps-menu',
@@ -32,4 +33,6 @@ export class StepsMenuComponent implements OnInit {
   onBackMenu(){
     this.newBackMenu.emit();
   }
+
+  
 }

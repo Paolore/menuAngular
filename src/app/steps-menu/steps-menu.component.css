@@ -10,3 +10,9 @@
 .container-padding{
   padding: 20px;
 }
+
+.border-menu{
+  border-color: #483928;
+   border-width: 2px;
+   border-style: solid;
+}
