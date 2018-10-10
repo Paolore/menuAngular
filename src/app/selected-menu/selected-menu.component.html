@@ -1,12 +1,11 @@
-
-<div class="margin alert alert-warning col-xl-12 col-md-6 table-responsive">
+<div class="margin alert alert-warning col-xl-12 col-md-12 table-responsive container-position body-step border-menu">
   <table >
       <tr > 
         <td ><input class="btn btn-success btn-sm" type="button" value="Finalizar Pedido" (click) = "submitOrder()"></td>
         <td ><input class="btn btn-danger btn-sm" type="button" value="Cancelar Pedido" (click) = "cancelOrder()"></td>
       </tr>
     </table>
-    <table class="table table-striped" >
+    <table class="table table-striped text-dark" >
       <thead>
         <tr>
           <th class="col">Total Pedido</th>
@@ -15,19 +14,15 @@
       </thead>
       <tbody *ngFor="let item of products">
         <tr> 
-          <td>{{item.name}}</td>
+          <td>
+            {{item.name}}
+            <br>
+            <p>
+              <span class="small" *ngFor="let addition of item.additionsMenu">*{{addition.name}}<br></span>
+            </p>
+          </td>
           <td>{{item.price}}</td>
         </tr>
       </tbody>
   </table>
 </div>
-<!-- <button class="btn btn-primary" (clic)="enviar(nombreModal)" >Abrir</button>
-<ng-template id="nombreModal" let-c="close" let-d="dismiss">
-  <div class="modal-header">
-    cabecera
-    <button type="button" class="close" (click)="c('')">x</button>
-  </div>
-  <div class="modal-body">
-    contenido
-  </div>
-</ng-template> -->

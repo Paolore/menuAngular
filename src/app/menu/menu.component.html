@@ -1,12 +1,12 @@
-<div class="container-fluid ">
+<div class="container-fluid body-step">
   <div class="row ">
-    <div *ngFor="let item of data" (click)="onSelected($event, item)" (touchend)="onSelected($event, item)" class="col-lg-3">
-      <div class="alert alert-warning" role="alert">
+    <div *ngFor="let item of data" (click)="onSelected($event, item)" (touchend)="onSelected($event, item)" class="col-lg-3 border-menu">
+      <div class="navbar">
         <img class="card-img-top" [src]="item.image" alt="Card image cap">
         <div class="card-body">
           <h6 class="card-title">{{item.name}}</h6>
           <p class="card-text small" [innerHTML]="item.nameStyle"></p>
-          <strong>{{item.price | currency}}</strong>
+          <strong class="border-menu">{{item.price | currency}}</strong>
         </div>
       </div>  
     </div>

@@ -1,9 +1,20 @@
-<div class="container-fluid">
-  <div class="row">
-    <div *ngFor="let item of steps" (click)="onSelected($event, item)" (touchend)="onSelected($event, item)" class="col-lg-3 col-xl-3 col-md-3">
+<div class="container-fluid body-step">
+  <div class="row container-padding">
+    <div *ngFor="let item of steps"  class="col-lg-3 col-xl-3 col-md-3" (click)="onSelectedStep(item)" (touchend)="onSelectedStep(item)">
       <div class="alert alert-warning" role="alert">
         <h6 class="card-title">{{item.name}}</h6>
       </div>
     </div>  
   </div>
+  <div class="row container-padding">
+    <div *ngFor="let item of currentStep.items"  class="col-lg-3 col-xl-3 col-md-3" (click)="onItemStepSelected(item)" (touchend)="onItemStepSelected(item)">
+      <div class="alert alert-warning" role="alert">
+        <p>{{item.name}}</p>
+      </div>
+    </div>  
+  </div>
+  <div >
+      <input type="button" value="Regresar al menu" class="btn btn-success btn-sm">
+  </div>
 </div> 
+ 

@@ -9,9 +9,22 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class StepsMenuComponent implements OnInit {
   
   @Input()  steps : any[] = new Array();
+  @Output() selectedItemStep: EventEmitter<any>  = new EventEmitter();
+ 
+  public currentStep : any = {};
   
-  constructor(){}
-  
+  constructor(){
+    
+  }
+
   ngOnInit(){
+  }
+
+  onSelectedStep(step : any){
+    this.currentStep = step;
+  }
+
+  onItemStepSelected(itemStep : any){
+    this.selectedItemStep.emit(itemStep);
   }
 }

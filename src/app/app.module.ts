@@ -5,9 +5,8 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component'
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
-import { NgbModal, ModalDismissReasons, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SelectedMenuComponent } from './selected-menu/selected-menu.component';
-import { StepsMenuComponent } from './steps-menu/steps-menu.component'
+import { StepsMenuComponent } from './steps-menu/steps-menu.component';
 
 
 
@@ -21,8 +20,8 @@ import { StepsMenuComponent } from './steps-menu/steps-menu.component'
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
-    NgbModule.forRoot()
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

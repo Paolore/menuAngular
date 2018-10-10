@@ -11,10 +11,8 @@ export class SelectedMenuComponent implements OnInit {
   @Output() onCancelEvent : EventEmitter<any> = new EventEmitter();
   @Output() onSubmitOrderEvent : EventEmitter<any> = new EventEmitter();
   
-  constructor(private modalService: NgbModal) { }
-    enviar(modal){
-      this.modalService.open(modal);
-    }
+  constructor() { }
+    
   ngOnInit() {
   }
 

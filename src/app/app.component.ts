@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-root',
@@ -12,12 +13,11 @@ export class AppComponent implements OnInit {
 
   onSelectedProduct(product){
     this.showMenu = false;
+
+    product.additionsMenu = new Array();
     
     this.listProducts.push(product);
     this.listSteps = product.steps;
-    console.log(this.listSteps);
-    
-    
   }
 
   ngOnInit() {
@@ -25,15 +25,15 @@ export class AppComponent implements OnInit {
   
   onCancelOrder(){
     this.listProducts = new Array();
+    this.showMenu = true;
   }
 
   onSubmitOrder(totalValue: number){
     this.onCancelOrder();
     alert(totalValue);
-
   }
 
-  onSelectedSteps(){
-    
+  addItemToOrder(itemStep){
+    this.listProducts[this.listProducts.length - 1].additionsMenu.push(itemStep);
   }
 }

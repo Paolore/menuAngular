@@ -1,0 +1,14 @@
+.body-step {
+  margin: 20px 20px 0px 0px;
+  background-image: url("../../assets/img/background2.jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.border-menu{
+  border-color: #483928;
+   border-width: 2px;
+   border-style: solid;
+}
