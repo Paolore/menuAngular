@@ -36,4 +36,8 @@ export class AppComponent implements OnInit {
   addItemToOrder(itemStep){
     this.listProducts[this.listProducts.length - 1].additionsMenu.push(itemStep);
   }
+
+  addNewMenu(){
+    this.showMenu = true;
+  }
 }

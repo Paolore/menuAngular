@@ -10,6 +10,7 @@ export class StepsMenuComponent implements OnInit {
   
   @Input()  steps : any[] = new Array();
   @Output() selectedItemStep: EventEmitter<any>  = new EventEmitter();
+  @Output() newBackMenu: EventEmitter<any> = new EventEmitter();
  
   public currentStep : any = {};
   
@@ -26,5 +27,9 @@ export class StepsMenuComponent implements OnInit {
 
   onItemStepSelected(itemStep : any){
     this.selectedItemStep.emit(itemStep);
+  }
+
+  onBackMenu(){
+    this.newBackMenu.emit();
   }
 }
